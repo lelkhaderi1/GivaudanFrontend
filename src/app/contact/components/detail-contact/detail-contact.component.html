@@ -1,0 +1,37 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Contact Information</mat-card-title>
+  </mat-card-header>
+  <mat-divider style="height: 20px"></mat-divider>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        last Name:
+        {{ contact.lastName }}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        first Name:
+        {{ contact.firstName }}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        email:
+        {{ contact.email }}
+      </mat-list-item>
+      <mat-list-item role="listitem">
+        phone Number :
+        {{ contact.phoneNumber }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="basic"
+        (click)="redirectTo('/contacts')"
+      >
+        <mat-icon>perm_identity</mat-icon> Back To list
+      </button></mat-card-actions
+    ></mat-card-footer
+  >
+</mat-card>

@@ -1,0 +1,36 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field >
+          <mat-label>first Name</mat-label>
+          <input matInput placeholder="firstName" required formControlName="firstName">
+          <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field >
+            <mat-label>last Name</mat-label>
+            <input matInput placeholder="lastName" required formControlName="lastName">
+            <mat-icon matSuffix>face</mat-icon>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+            <mat-label>Phone number</mat-label>
+            <input matInput placeholder="phoneNumber" required formControlName="phoneNumber">
+            <mat-icon matSuffix>phone</mat-icon>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email" required formControlName="email">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+      </p>   
+      <p>
+        <button mat-raised-button color="warn" type="submit"  [disabled]="!contactForm.valid">
+           Edit
+        </button>
+      
+      </p> 
+</form>
